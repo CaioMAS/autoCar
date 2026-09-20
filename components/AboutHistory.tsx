@@ -30,11 +30,11 @@ export default function AboutHistory() {
         "Ampliação do espaço de atendimento com elevadores modernos e primeiros alinhadores ópticos computadorizados.",
     },
     {
-      image: "/images/hero-workshop.jpg",
+      image: "/images/estrutura-oficina-bosch-service.webp",
       tag: "Hoje • Alta Tecnologia",
-      title: "Rede Homologada Bosch Car Service",
+      title: "Centro Automotivo Bosch Car Service",
       description:
-        "Estrutura de ponta com scanners oficiais KTS, alinhamento laser 3D e protocolo unificado de padrão mundial.",
+        "Estrutura moderna na Av. Itamar Caldeira Brant com scanners oficiais KTS, alinhamento laser 3D e protocolo internacional Bosch.",
     },
   ];
 

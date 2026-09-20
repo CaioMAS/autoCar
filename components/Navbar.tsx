@@ -24,11 +24,11 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
 
   const navLinks = [
     { label: "Início", href: "#hero" },
+    { label: "Estrutura", href: "#estrutura" },
     { label: "Serviços", href: "#servicos" },
     { label: "Diagnóstico", href: "#diagnostico" },
     { label: "Padrão Bosch", href: "#bosch-service" },
-    { label: "Sobre Nós", href: "#sobre" },
-    { label: "Dicas", href: "#dicas" },
+    { label: "Sobre", href: "#sobre" },
     { label: "Contato", href: "#contato" },
   ];
 

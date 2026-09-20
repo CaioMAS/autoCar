@@ -5,12 +5,13 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import FeaturePillars from "@/components/FeaturePillars";
 import QuickContactStrip from "@/components/QuickContactStrip";
-import DiagnosticAssistant from "@/components/DiagnosticAssistant";
 import ServicesGrid from "@/components/ServicesGrid";
+import WorkshopStructure from "@/components/WorkshopStructure";
 import BoschStandard from "@/components/BoschStandard";
-import BrandsCarousel from "@/components/BrandsCarousel";
 import AboutHistory from "@/components/AboutHistory";
+import DiagnosticAssistant from "@/components/DiagnosticAssistant";
 import Testimonials from "@/components/Testimonials";
+import BrandsCarousel from "@/components/BrandsCarousel";
 import TipsInformativos from "@/components/TipsInformativos";
 import FaqSection from "@/components/FaqSection";
 import LocationMap from "@/components/LocationMap";
@@ -34,50 +35,46 @@ export default function Home() {
       {/* Top Navigation */}
       <Navbar onOpenBooking={handleOpenBooking} />
 
-      {/* Hero & Sections Flow Container (Desktop: Hero -> Pillars -> Contact -> Diagnostic | Mobile: Hero -> Diagnostic -> Pillars -> Contact) */}
-      <div className="homepage-hero-flow">
-        <div className="flow-hero">
-          <Hero onOpenBooking={handleOpenBooking} />
-        </div>
+      {/* 1. Hero: Real Facade Image as Main Anchor + Direct Conversion CTAs */}
+      <Hero onOpenBooking={handleOpenBooking} />
 
-        <div className="flow-pillars">
-          <FeaturePillars />
-        </div>
+      {/* 2. Key Differentials & Pillars */}
+      <FeaturePillars />
 
-        <div className="flow-contact">
-          <QuickContactStrip />
-        </div>
+      {/* 3. Quick Contact & Emergency Phone Strip */}
+      <QuickContactStrip />
 
-        <div className="flow-diagnostic">
-          <DiagnosticAssistant />
-        </div>
-      </div>
-
-      {/* Services Grid with 3D and Laser Technology */}
+      {/* 4. Specialized Services Grid */}
       <ServicesGrid onOpenBooking={handleOpenBooking} />
 
-      {/* Official Bosch Car Service Credentials */}
+      {/* 5. Physical Workshop Infrastructure (2 Real Interior Photos) */}
+      <WorkshopStructure onOpenBooking={handleOpenBooking} />
+
+      {/* 6. Bosch Car Service Official Credentials & Technology */}
       <BoschStandard />
 
-      {/* Partner Brands & Genuine Replacement Parts */}
-      <BrandsCarousel />
-
-      {/* About & Family Heritage (Edmar Batata, Danilo, Edmar Jr) */}
+      {/* 7. About & Family Heritage (Edmar Batata, Danilo, Edmar Jr) */}
       <AboutHistory />
 
-      {/* Google 5.0 Star Customer Reviews */}
+      {/* 8. Interactive Automotive Diagnostic Assistant */}
+      <DiagnosticAssistant />
+
+      {/* 9. Verified Google Maps Reviews Widget (4.7 Stars) */}
       <Testimonials />
 
-      {/* Modernized Informative Articles */}
+      {/* 10. Genuine Partner Brands & Components */}
+      <BrandsCarousel />
+
+      {/* 11. Technical Care & Maintenance Tips */}
       <TipsInformativos />
 
-      {/* Frequently Asked Questions */}
+      {/* 12. Frequently Asked Questions */}
       <FaqSection />
 
-      {/* Location, Google Map, Waze, and Contact */}
+      {/* 13. Physical Location, Google Maps & Waze Navigation */}
       <LocationMap />
 
-      {/* Comprehensive Footer */}
+      {/* 14. Comprehensive Footer with Fiscal & Contact Info */}
       <Footer />
 
       {/* Mobile Sticky Quick Action Bar */}

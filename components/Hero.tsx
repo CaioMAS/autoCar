@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Calendar, MessageCircle, CheckCircle2, Award } from "lucide-react";
+import { Calendar, MessageCircle, CheckCircle2, Award, MapPin, Eye } from "lucide-react";
 import { contactInfo } from "@/data/siteData";
 
 interface HeroProps {
@@ -10,7 +10,6 @@ interface HeroProps {
 }
 
 export default function Hero({ onOpenBooking }: HeroProps) {
-
   return (
     <section
       id="hero"
@@ -27,7 +26,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
           style={{
             display: "grid",
             gridTemplateColumns: "1.05fr 0.95fr",
-            gap: "48px",
+            gap: "44px",
             alignItems: "center",
           }}
           className="hero-split-grid"
@@ -59,37 +58,34 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             {/* Title */}
             <h1
               style={{
-                fontSize: "clamp(2rem, 4vw, 3.2rem)",
+                fontSize: "clamp(2rem, 3.8vw, 3.1rem)",
                 fontWeight: 800,
                 color: "var(--text-main)",
                 lineHeight: 1.15,
                 marginBottom: "18px",
               }}
             >
-              Centro Automotivo e Mecânica de{" "}
-              <span style={{ color: "var(--bosch-blue)" }}>Alta Precisão</span> em Montes Claros
+              Oficina Mecânica Especializada &{" "}
+              <span style={{ color: "var(--bosch-blue)" }}>Padrão Bosch</span> em Montes Claros
             </h1>
 
             {/* Subtitle */}
             <p
               style={{
-                fontSize: "1.08rem",
+                fontSize: "1.06rem",
                 color: "var(--text-secondary)",
                 lineHeight: 1.6,
                 maxWidth: "560px",
                 marginBottom: "28px",
               }}
             >
-              Manutenção preventiva e corretiva com tecnologia oficial Bosch, peças genuínas de 1ª linha
-              e orçamento transparente. Seu carro cuidado por quem entende de verdade.
+              Mais de 24 anos de tradição, diagnóstico computadorizado com tecnologia oficial Bosch,
+              peças genuínas de 1ª linha e transparência do início ao fim. O cuidado que o seu veículo merece.
             </p>
 
             {/* Coherent Action Buttons */}
             <div className="hero-cta-group">
-              <button
-                onClick={onOpenBooking}
-                className="btn-primary hero-btn"
-              >
+              <button onClick={onOpenBooking} className="btn-primary hero-btn">
                 <Calendar size={18} />
                 Agendar Revisão
               </button>
@@ -104,11 +100,9 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                 Falar no WhatsApp
               </a>
 
-              <a
-                href="#servicos"
-                className="btn-secondary hero-btn"
-              >
-                Ver Serviços
+              <a href="#estrutura" className="btn-secondary hero-btn">
+                <Eye size={17} />
+                Conhecer Estrutura
               </a>
             </div>
 
@@ -126,88 +120,136 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             >
               <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
                 <CheckCircle2 size={16} color="#16a34a" />
-                Atendimento Multimarcas
+                Atendimento Multimarcas Especializado
               </span>
               <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
                 <CheckCircle2 size={16} color="#16a34a" />
-                Orçamento Transparente
+                Orçamento Transparente com Peças Genuínas
               </span>
               <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
                 <CheckCircle2 size={16} color="#16a34a" />
-                Garantia Nacional Bosch
+                Garantia Nacional da Rede Bosch
               </span>
             </div>
           </div>
 
-          {/* Right Column: Clean Photographic Showcase */}
+          {/* Right Column: Real Facade Photographic Showcase */}
           <div style={{ position: "relative" }} className="hero-image-wrapper">
             <div
               style={{
                 position: "relative",
                 width: "100%",
-                height: "420px",
+                height: "440px",
                 borderRadius: "var(--radius-xl)",
                 overflow: "hidden",
-                boxShadow: "0 14px 36px rgba(0, 0, 0, 0.08)",
+                boxShadow: "0 18px 40px rgba(0, 86, 150, 0.12)",
                 border: "1px solid var(--border-light)",
               }}
               className="hero-image-box"
             >
               <Image
-                src="/images/hero-workshop.jpg"
-                alt="Oficina Auto Car Bosch Car Service Montes Claros"
+                src="/images/fachada-autocar-montes-claros.webp"
+                alt="Fachada Oficial da Auto Car Bosch Car Service em Montes Claros - MG"
                 fill
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "cover", objectPosition: "center" }}
                 priority
+                sizes="(max-width: 768px) 100vw, 550px"
               />
               <div
                 style={{
                   position: "absolute",
                   inset: 0,
-                  background: "linear-gradient(to top, rgba(0, 0, 0, 0.35) 0%, transparent 60%)",
+                  background:
+                    "linear-gradient(to top, rgba(15, 23, 42, 0.45) 0%, rgba(15, 23, 42, 0.05) 50%, transparent 100%)",
                 }}
               />
+
+              {/* Physical Location Badge overlay on image */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "16px",
+                  left: "16px",
+                  right: "16px",
+                  background: "rgba(255, 255, 255, 0.95)",
+                  backdropFilter: "blur(10px)",
+                  WebkitBackdropFilter: "blur(10px)",
+                  padding: "12px 18px",
+                  borderRadius: "var(--radius-md)",
+                  border: "1px solid rgba(255, 255, 255, 0.6)",
+                  boxShadow: "0 4px 16px rgba(0, 0, 0, 0.12)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: "12px",
+                }}
+                className="hero-facade-badge"
+              >
+                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                  <div
+                    style={{
+                      width: "36px",
+                      height: "36px",
+                      borderRadius: "var(--radius-sm)",
+                      background: "var(--bosch-blue-light)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                      color: "var(--bosch-blue)",
+                    }}
+                  >
+                    <MapPin size={18} />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "var(--bosch-blue)", textTransform: "uppercase" }}>
+                      Sede Própria & Fácil Acesso
+                    </div>
+                    <div style={{ fontSize: "0.88rem", fontWeight: 700, color: "var(--text-main)" }}>
+                      Av. Itamar Caldeira Brant, 50 · Montes Claros
+                    </div>
+                  </div>
+                </div>
+
+                <span
+                  style={{
+                    background: "#dcfce7",
+                    color: "#15803d",
+                    padding: "4px 10px",
+                    borderRadius: "var(--radius-full)",
+                    fontSize: "0.75rem",
+                    fontWeight: 700,
+                    whiteSpace: "nowrap",
+                  }}
+                  className="hero-open-tag"
+                >
+                  Seg a Sex · 07:45 às 18h
+                </span>
+              </div>
             </div>
 
-            {/* Clean Floating Badge */}
+            {/* Credential Seal Floating */}
             <div
               style={{
                 position: "absolute",
-                bottom: "-14px",
-                right: "20px",
+                top: "-12px",
+                right: "-8px",
                 background: "#ffffff",
-                padding: "14px 20px",
-                borderRadius: "var(--radius-md)",
-                boxShadow: "0 8px 24px rgba(0, 0, 0, 0.1)",
+                padding: "8px 14px",
+                borderRadius: "var(--radius-full)",
+                boxShadow: "0 6px 16px rgba(0, 0, 0, 0.1)",
                 border: "1px solid var(--border-light)",
-                display: "flex",
+                display: "inline-flex",
                 alignItems: "center",
-                gap: "12px",
+                gap: "8px",
+                zIndex: 2,
               }}
-              className="hero-floating-badge"
+              className="hero-verified-pill"
             >
-              <div
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  borderRadius: "var(--radius-sm)",
-                  background: "var(--bosch-red-light)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexShrink: 0,
-                }}
-              >
-                <Award size={22} color="#e30613" />
-              </div>
-              <div>
-                <div style={{ fontSize: "0.75rem", fontWeight: 700, color: "#e30613", textTransform: "uppercase" }}>
-                  Selo Oficial Bosch
-                </div>
-                <div style={{ fontSize: "0.92rem", fontWeight: 700, color: "var(--text-main)" }}>
-                  Padrão Mundial de Qualidade
-                </div>
-              </div>
+              <Award size={16} color="#e30613" />
+              <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "var(--text-main)" }}>
+                Estrutura Física Real Verificada
+              </span>
             </div>
           </div>
         </div>
@@ -216,7 +258,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
       <style jsx>{`
         .hero-section {
           padding-top: 140px;
-          padding-bottom: 48px;
+          padding-bottom: 52px;
         }
 
         .hero-cta-group {
@@ -229,7 +271,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
 
         .hero-btn {
           height: 48px;
-          padding: 0 24px;
+          padding: 0 22px;
           font-size: 0.95rem;
           font-weight: 600;
           border-radius: var(--radius-md);
@@ -244,12 +286,8 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             grid-template-columns: minmax(0, 1fr) !important;
             gap: 32px !important;
           }
-          .hero-floating-badge {
-            position: static !important;
-            margin-top: 12px !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            box-sizing: border-box !important;
+          .hero-verified-pill {
+            display: none !important;
           }
         }
 
@@ -267,7 +305,10 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             text-align: center;
           }
           .hero-image-box {
-            height: 250px !important;
+            height: 280px !important;
+          }
+          .hero-open-tag {
+            display: none !important;
           }
         }
       `}</style>
