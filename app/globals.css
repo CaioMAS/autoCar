@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Clean Light Automotive Theme */
+  --bg-main: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-elevated: #ffffff;
+  
+  /* Authentic Bosch Colors */
+  --bosch-blue: #005696;
+  --bosch-blue-vibrant: #0072ce;
+  --bosch-blue-deep: #003a66;
+  --bosch-blue-light: #f0f7ff;
+  --bosch-blue-border: #bae6fd;
+  
+  --bosch-red: #e30613;
+  --bosch-red-dark: #b8000d;
+  --bosch-red-light: #fee2e2;
+  --bosch-red-border: #fecaca;
+  
+  --success: #16a34a;
+  --success-light: #dcfce7;
+  --warning: #d97706;
+  --warning-light: #fef3c7;
+  
+  /* Text */
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  
+  /* Borders & Shadows */
+  --border-light: #e2e8f0;
+  --border-subtle: #edf2f7;
+  --border-hover: #cbd5e1;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 10px 28px rgba(0, 86, 150, 0.1);
+  
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  
+  /* Standard Button Height and Typography */
+  --btn-height: 48px;
+  --btn-font-size: 0.94rem;
+  
+  --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+  background-color: var(--bg-main);
+  overflow-x: hidden !important;
+  max-width: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden !important;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+img, svg, iframe, video {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 74px; /* Space for MobileFloatingBar */
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bosch-blue);
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+.section {
+  padding: 80px 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 0;
+  }
+}
+
+/* Section Header Shared Style */
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 48px auto;
+}
+
+@media (max-width: 640px) {
+  .section-header {
+    margin-bottom: 32px;
+  }
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  background: var(--bosch-blue-light);
+  border: 1px solid var(--bosch-blue-border);
+  color: var(--bosch-blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-badge.red {
+  background: var(--bosch-red-light);
+  border-color: var(--bosch-red-border);
+  color: var(--bosch-red);
+}
+
+.section-title {
+  font-size: clamp(1.85rem, 3.6vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.section-title span {
+  color: var(--bosch-blue);
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+/* ==========================================================
+   COHERENT BUTTON SYSTEM (Uniform heights, paddings, fonts)
+   ========================================================== */
+.btn-primary,
+.btn-whatsapp,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: var(--btn-height);
+  padding: 0 24px;
+  font-weight: 600;
+  font-size: var(--btn-font-size);
+  border-radius: var(--radius-md);
+  text-align: center;
+  white-space: nowrap;
+  transition: var(--transition);
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background: var(--bosch-blue);
+  color: #ffffff;
+  border: 1.5px solid transparent;
+  box-shadow: 0 2px 10px rgba(0, 86, 150, 0.2);
+}
+
+.btn-primary:hover {
+  background: var(--bosch-blue-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 86, 150, 0.3);
+}
+
+.btn-whatsapp {
+  background: #16a34a;
+  color: #ffffff;
+  border: 1.5px solid transparent;
+  box-shadow: 0 2px 10px rgba(22, 163, 74, 0.2);
+}
+
+.btn-whatsapp:hover {
+  background: #15803d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.3);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: var(--text-main);
+  border: 1.5px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-secondary);
+  border-color: #94a3b8;
+  color: var(--bosch-blue);
+  transform: translateY(-2px);
+}
+
+/* Mobile full-width button utility */
+@media (max-width: 640px) {
+  .btn-mobile-full {
+    width: 100% !important;
+  }
+}
+
+/* Clean Card Utility */
+.clean-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  .clean-card {
+    padding: 20px;
+    border-radius: var(--radius-md);
+  }
+}
+
+.clean-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+/* ==========================================================
+   RESPONSIVE SECTION ORDERING (Mobile: Diagnostic First)
+   ========================================================== */
+.homepage-hero-flow {
+  display: flex;
+  flex-direction: column;
+}
+
+.flow-hero {
+  order: 1;
+}
+
+.flow-pillars {
+  order: 2;
+}
+
+.flow-contact {
+  order: 3;
+}
+
+.flow-diagnostic {
+  order: 4;
+}
+
+/* On Mobile and Tablet Portrait (<= 960px):
+   Diagnostic Assistant appears FIRST immediately after Hero,
+   before the technical pillar and contact cards! */
+@media (max-width: 960px) {
+  .flow-hero {
+    order: 1;
+  }
+  .flow-diagnostic {
+    order: 2;
+  }
+  .flow-pillars {
+    order: 3;
+  }
+  .flow-contact {
+    order: 4;
+  }
+}
+
+/* Prevent flex items from expanding flex container horizontally */
+.homepage-hero-flow,
+.flow-hero,
+.flow-pillars,
+.flow-contact,
+.flow-diagnostic {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* SSR-Safe Mobile Header Visibility (Prevents 1240px header flash from widening mobile viewport) */
+@media (max-width: 960px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-hamburger {
+    display: flex !important;
+  }
+}
+
+
