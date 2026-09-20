@@ -120,7 +120,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             >
               <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
                 <CheckCircle2 size={16} color="#16a34a" />
-                Atendimento Multimarcas Especializado
+                Especialistas em Nacionais & Importados
               </span>
               <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
                 <CheckCircle2 size={16} color="#16a34a" />

@@ -27,7 +27,7 @@ export default function ServicesGrid({ onOpenBooking }: ServicesGridProps) {
             Especialidades Técnicas
           </div>
           <h2 className="section-title">
-            Serviços Especializados <span>Multimarcas</span>
+            Serviços Especializados <span>Nacionais & Importados</span>
           </h2>
           <p className="section-subtitle">
             Equipamentos de padrão mundial Bosch, ferramentas de alta exatidão e técnicos certificados

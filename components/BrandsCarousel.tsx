@@ -31,13 +31,13 @@ export default function BrandsCarousel() {
             }}
           >
             <Award size={14} />
-            Atendimento Multimarcas
+            Peças Genuínas & Linha de Montagem
           </div>
           <h3 style={{ fontSize: "1.45rem", color: "var(--text-main)", fontWeight: 700 }}>
-            Especialistas nas Principais Marcas do Mercado
+            Componentes Homologados pelas Maiores Fabricantes
           </h3>
           <p style={{ fontSize: "0.92rem", color: "var(--text-secondary)", marginTop: "4px" }}>
-            Ferramental específico e diagnóstico computadorizado para veículos nacionais e importados.
+            Trabalhamos exclusivamente com peças originais e de 1ª linha recomendadas pelas montadoras para máxima durabilidade.
           </p>
         </div>
 

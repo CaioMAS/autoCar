@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import AutomakerMarquee from "@/components/AutomakerMarquee";
 import FeaturePillars from "@/components/FeaturePillars";
 import QuickContactStrip from "@/components/QuickContactStrip";
 import ServicesGrid from "@/components/ServicesGrid";
@@ -38,7 +39,10 @@ export default function Home() {
       {/* 1. Hero: Real Facade Image as Main Anchor + Direct Conversion CTAs */}
       <Hero onOpenBooking={handleOpenBooking} />
 
-      {/* 2. Key Differentials & Pillars */}
+      {/* 2. Automaker Continuous Marquee: National Leaders & Premium Imports */}
+      <AutomakerMarquee />
+
+      {/* 3. Key Differentials & Pillars */}
       <FeaturePillars />
 
       {/* 3. Quick Contact & Emergency Phone Strip */}
