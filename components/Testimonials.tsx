@@ -2,7 +2,7 @@
 
 import React from "react";
 import { testimonials } from "@/data/siteData";
-import { Star, CheckCircle, ExternalLink, ShieldCheck, CornerDownRight } from "lucide-react";
+import { Star, ExternalLink, ShieldCheck, ThumbsUp, Wrench } from "lucide-react";
 
 // Official Google 'G' Multi-Color SVG
 const GoogleGIcon = ({ size = 20 }: { size?: number }) => (
@@ -26,6 +26,18 @@ const GoogleGIcon = ({ size = 20 }: { size?: number }) => (
   </svg>
 );
 
+const LocalGuideStar = ({ size = 13 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
+    <path
+      d="M12 2L14.85 8.08L21.5 8.84L16.55 13.33L17.89 19.91L12 16.59L6.11 19.91L7.45 13.33L2.5 8.84L9.15 8.08L12 2Z"
+      fill="#FBBC04"
+      stroke="#D97706"
+      strokeWidth="1.5"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 export default function Testimonials() {
   const googleMapsUrl =
     "https://www.google.com/maps/search/AUTOCAR+MONTES+CLAROS+-+Bosch+Service+Av.+Itamar+Caldeira+Brant";
@@ -45,14 +57,14 @@ export default function Testimonials() {
             }}
           >
             <GoogleGIcon size={16} />
-            Avaliações Verificadas no Google
+            Depoimentos Reais no Google Maps
           </div>
           <h2 className="section-title">
             O que Nossos Clientes Dizem no <span>Google</span>
           </h2>
           <p className="section-subtitle">
-            Transparência absoluta, precisão técnica Bosch e o carinho de quem cuida dos motoristas de
-            Montes Claros e do Norte de Minas há mais de duas décadas.
+            Avaliações 100% autênticas e registradas por quem confia a manutenção de seus veículos
+            na Auto Car Bosch Service em Montes Claros.
           </p>
 
           {/* Google Rating Summary Bar */}
@@ -102,7 +114,7 @@ export default function Testimonials() {
                 textDecoration: "underline",
               }}
             >
-              Ver perfil oficial <ExternalLink size={13} />
+              Ver todas as avaliações no Google <ExternalLink size={13} />
             </a>
           </div>
         </div>
@@ -124,8 +136,12 @@ export default function Testimonials() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
-                padding: "28px",
+                padding: "26px",
                 position: "relative",
+                background: "#ffffff",
+                border: "1px solid #e2e8f0",
+                borderRadius: "var(--radius-lg)",
+                boxShadow: "0 2px 10px rgba(0,0,0,0.03)",
               }}
             >
               <div>
@@ -139,25 +155,50 @@ export default function Testimonials() {
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                    {/* User Initials Avatar with Material Google Color */}
-                    <div
-                      style={{
-                        width: "46px",
-                        height: "46px",
-                        borderRadius: "50%",
-                        background: t.avatarColor,
-                        color: "#ffffff",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontWeight: 700,
-                        fontSize: "1rem",
-                        boxShadow: "0 2px 6px rgba(0,0,0,0.12)",
-                        flexShrink: 0,
-                      }}
-                    >
-                      {t.initials}
-                    </div>
+                    {/* Real Profile Image if available, else Initials */}
+                    {t.avatarImg ? (
+                      <div
+                        style={{
+                          width: "48px",
+                          height: "48px",
+                          borderRadius: "50%",
+                          overflow: "hidden",
+                          boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
+                          border: "2px solid #ffffff",
+                          flexShrink: 0,
+                          background: "#e2e8f0",
+                        }}
+                      >
+                        <img
+                          src={t.avatarImg}
+                          alt={t.name}
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                          }}
+                        />
+                      </div>
+                    ) : (
+                      <div
+                        style={{
+                          width: "48px",
+                          height: "48px",
+                          borderRadius: "50%",
+                          background: t.avatarColor,
+                          color: "#ffffff",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          fontWeight: 700,
+                          fontSize: "1rem",
+                          boxShadow: "0 2px 6px rgba(0,0,0,0.12)",
+                          flexShrink: 0,
+                        }}
+                      >
+                        {t.initials}
+                      </div>
+                    )}
 
                     <div>
                       <div
@@ -173,37 +214,51 @@ export default function Testimonials() {
                       <div
                         style={{
                           fontSize: "0.78rem",
-                          color: "#64748b",
+                          color: t.isLocalGuide ? "#b45309" : "#64748b",
+                          fontWeight: t.isLocalGuide ? 600 : 500,
                           marginTop: "3px",
                           display: "flex",
                           alignItems: "center",
                           gap: "4px",
                         }}
                       >
-                        <ShieldCheck size={13} color="#16a34a" />
-                        {t.localGuide || "Cliente Verificado"}
+                        {t.isLocalGuide ? (
+                          <>
+                            <LocalGuideStar size={13} />
+                            {t.localGuide}
+                          </>
+                        ) : (
+                          <>
+                            <ShieldCheck size={13} color="#16a34a" />
+                            {t.localGuide || "Cliente Verificado"}
+                          </>
+                        )}
                       </div>
                     </div>
                   </div>
 
                   {/* Google Mark in Card */}
                   <div
-                    title="Avaliação postada no Google"
+                    title="Avaliação real no Google Maps"
                     style={{
                       background: "#f8fafc",
-                      padding: "6px",
-                      borderRadius: "50%",
+                      padding: "6px 8px",
+                      borderRadius: "var(--radius-full)",
                       border: "1px solid #e2e8f0",
                       display: "flex",
                       alignItems: "center",
-                      justifyContent: "center",
+                      gap: "4px",
+                      fontSize: "0.72rem",
+                      fontWeight: 700,
+                      color: "#475569",
                     }}
                   >
-                    <GoogleGIcon size={18} />
+                    <GoogleGIcon size={15} />
+                    <span>Google</span>
                   </div>
                 </div>
 
-                {/* Rating Stars + Date + Vehicle */}
+                {/* Rating Stars + Date + Badges */}
                 <div
                   style={{
                     display: "flex",
@@ -220,24 +275,42 @@ export default function Testimonials() {
                   </div>
 
                   <span style={{ fontSize: "0.8rem", color: "#94a3b8" }}>•</span>
-
                   <span style={{ fontSize: "0.8rem", color: "#64748b" }}>{t.date}</span>
 
-                  <span style={{ fontSize: "0.8rem", color: "#94a3b8" }}>•</span>
+                  {t.badge && (
+                    <>
+                      <span style={{ fontSize: "0.8rem", color: "#94a3b8" }}>•</span>
+                      <span
+                        style={{
+                          background: "#ecfdf5",
+                          border: "1px solid #a7f3d0",
+                          color: "#065f46",
+                          fontSize: "0.72rem",
+                          fontWeight: 700,
+                          padding: "2px 8px",
+                          borderRadius: "var(--radius-full)",
+                        }}
+                      >
+                        🏷️ {t.badge}
+                      </span>
+                    </>
+                  )}
 
-                  <span
-                    style={{
-                      background: "var(--bosch-blue-light)",
-                      border: "1px solid var(--bosch-blue-border)",
-                      color: "var(--bosch-blue)",
-                      fontSize: "0.74rem",
-                      fontWeight: 700,
-                      padding: "2px 8px",
-                      borderRadius: "var(--radius-sm)",
-                    }}
-                  >
-                    🚗 {t.vehicle}
-                  </span>
+                  {t.highlight && (
+                    <span
+                      style={{
+                        background: "var(--bosch-blue-light)",
+                        border: "1px solid var(--bosch-blue-border)",
+                        color: "var(--bosch-blue)",
+                        fontSize: "0.72rem",
+                        fontWeight: 700,
+                        padding: "2px 8px",
+                        borderRadius: "var(--radius-sm)",
+                      }}
+                    >
+                      ★ {t.highlight}
+                    </span>
+                  )}
                 </div>
 
                 {/* Review Text */}
@@ -245,50 +318,78 @@ export default function Testimonials() {
                   style={{
                     fontSize: "0.93rem",
                     color: "var(--text-secondary)",
-                    lineHeight: 1.6,
+                    lineHeight: 1.65,
                     marginBottom: "16px",
+                    whiteSpace: "pre-line",
                   }}
                 >
                   &ldquo;{t.text}&rdquo;
                 </p>
-              </div>
 
-              {/* Owner Reply Box (Standard Google Business Reply) */}
-              {t.ownerReply && (
-                <div
-                  style={{
-                    background: "#f1f5f9",
-                    borderRadius: "var(--radius-md)",
-                    padding: "12px 16px",
-                    borderLeft: "3px solid var(--bosch-blue)",
-                    marginTop: "8px",
-                  }}
-                >
+                {/* Optional Services Tags if listed in Google review */}
+                {t.services && t.services.length > 0 && (
                   <div
                     style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "6px",
-                      fontSize: "0.78rem",
-                      fontWeight: 700,
-                      color: "var(--bosch-blue)",
-                      marginBottom: "4px",
+                      background: "#f8fafc",
+                      border: "1px solid #e2e8f0",
+                      borderRadius: "var(--radius-md)",
+                      padding: "10px 14px",
+                      marginBottom: "14px",
                     }}
                   >
-                    <CornerDownRight size={13} />
-                    Resposta do Proprietário (Auto Car Bosch Service)
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "6px",
+                        fontSize: "0.74rem",
+                        fontWeight: 700,
+                        color: "#475569",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.04em",
+                        marginBottom: "6px",
+                      }}
+                    >
+                      <Wrench size={12} color="var(--bosch-blue)" />
+                      Serviços Realizados:
+                    </div>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+                      {t.services.map((svc, sIdx) => (
+                        <span
+                          key={sIdx}
+                          style={{
+                            background: "#ffffff",
+                            border: "1px solid #cbd5e1",
+                            color: "#334155",
+                            fontSize: "0.75rem",
+                            padding: "2px 8px",
+                            borderRadius: "var(--radius-sm)",
+                            fontWeight: 500,
+                          }}
+                        >
+                          {svc}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <p
-                    style={{
-                      fontSize: "0.84rem",
-                      color: "#475569",
-                      lineHeight: 1.45,
-                      fontStyle: "italic",
-                      margin: 0,
-                    }}
-                  >
-                    {t.ownerReply}
-                  </p>
+                )}
+              </div>
+
+              {/* Reaction Footnote if present */}
+              {t.likes && (
+                <div
+                  style={{
+                    borderTop: "1px solid #f1f5f9",
+                    paddingTop: "10px",
+                    marginTop: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "6px",
+                    fontSize: "0.78rem",
+                    color: "#64748b",
+                  }}
+                >
+                  <span>❤️ 🙏 {t.likes} pessoas curtiram esta avaliação no Google</span>
                 </div>
               )}
             </div>

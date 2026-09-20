@@ -255,63 +255,78 @@ export interface TestimonialItem {
   name: string;
   initials: string;
   avatarColor: string;
-  vehicle: string;
+  avatarImg?: string;
+  vehicle?: string;
+  badge?: string;
+  services?: string[];
   text: string;
   rating: number;
   date: string;
   city: string;
   localGuide?: string;
+  isLocalGuide?: boolean;
+  likes?: number;
+  highlight?: string;
   ownerReply?: string;
 }
 
 export const testimonials: TestimonialItem[] = [
   {
-    name: "Rodrigo Vasconcelos",
-    initials: "RV",
-    avatarColor: "#1a73e8",
-    vehicle: "Jeep Compass Longitude",
-    text: "Excelente atendimento! O diagnóstico da injeção foi cirúrgico com os equipamentos da Bosch. Enquanto outras oficinas queriam trocar peças desnecessárias, a Auto Car identificou e corrigiu o sensor exato. Transparência e competência nota 10!",
+    name: "Gustavo Fausto",
+    initials: "GF",
+    avatarColor: "#e53935",
+    avatarImg: "/reviews/gustavo_fausto.png",
+    vehicle: "Cliente Verificado",
+    text: "Excelente atendimento e principalmente honestidade. Agradecer ao Júneo e ao Danilo pelo profissionalismo e rapidez no serviço, profissionais top de linha, me livraram de tomar um golpe de outro estabelecimento.",
     rating: 5,
-    date: "Há 2 semanas",
+    date: "2 anos atrás",
     city: "Montes Claros - MG",
-    localGuide: "Local Guide · 18 avaliações",
-    ownerReply: "Muito obrigado, Rodrigo! A precisão e honestidade no diagnóstico com nossos scanners Bosch KTS são o pilar da nossa oficina. Conte sempre conosco!",
+    localGuide: "4 avaliações",
+    likes: 2,
+    highlight: "Honestidade & Profissionalismo",
   },
   {
-    name: "Mariana Alencar",
-    initials: "MA",
-    avatarColor: "#e37400",
-    vehicle: "Volkswagen T-Cross",
-    text: "Oficina impecável, limpa e super moderna. O alinhamento 3D a laser deixou o carro perfeito na viagem para Belo Horizonte pela BR-135. Atendimento rápido pelo WhatsApp e preço justo com peças originais. Recomendo de olhos fechados!",
+    name: "Caio Santos",
+    initials: "CS",
+    avatarColor: "#00897b",
+    avatarImg: "/reviews/caio_santos.png",
+    vehicle: "Diagnóstico, Freios & Suspensão",
+    text: "Profissionais de extrema confiança! Levei meu carro para avaliar e o diagnóstico deles foi excelente, rápido e cirúrgico. Atendimento nota 10 e, acima de tudo, muita honestidade na hora de explicar o que realmente precisava ser feito e passar o orçamento. É difícil achar mecânicos assim hoje em dia, recomendo a todos!",
     rating: 5,
-    date: "Há 1 mês",
+    date: "Avaliação Google",
     city: "Montes Claros - MG",
-    localGuide: "Cliente Verificado",
-    ownerReply: "Ficamos muito felizes com seu feedback, Mariana! Segurança na estrada e conforto para sua família é nossa prioridade absoluta.",
+    localGuide: "10 avaliações",
+    badge: "Ótimo preço",
+    services: ["Diagnóstico de motor veicular", "Alinhamento de pneus", "Freios", "Troca de óleo"],
+    highlight: "Diagnóstico Cirúrgico & Confiança",
   },
   {
-    name: "Carlos Eduardo Mendes",
-    initials: "CM",
-    avatarColor: "#0f9d58",
-    vehicle: "Toyota Corolla Hybrid",
-    text: "Levo meus carros na Auto Car desde a época da oficina antiga do Sr. Batata, e agora com o Danilo e Edmar Jr a estrutura se tornou uma das melhores de Minas Gerais. O padrão Bosch Car Service passa total tranquilidade.",
+    name: "Rodrigo Araújo",
+    initials: "RA",
+    avatarColor: "#1e88e5",
+    avatarImg: "/reviews/rodrigo_araujo.png",
+    vehicle: "Socorro na BR · Bomba de Combustível",
+    text: "Meu carro teve um problema na BR, e pedi para ser rebocado até essa oficina. Ainda não a conhecia, apenas de avaliações aqui do Google.\nO dono, Sr. Danilo, foi super atencioso e entendeu minha emergência, pois estava em viagem para o nordeste.\nEle fez o diagnóstico (bomba de combustível), e resolveu super rápido, com valor condizente com a qualidade.\nRecomendo demais, e deixo aqui meu agradecimento.",
     rating: 5,
-    date: "Há 3 semanas",
+    date: "2 anos atrás",
     city: "Montes Claros - MG",
-    localGuide: "Local Guide · 34 avaliações",
-    ownerReply: "Grande Carlos! Uma honra enorme ter clientes amigos de longa data como você acompanhando essa evolução de mais de duas décadas. Um forte abraço!",
+    localGuide: "Local Guide · 67 avaliações · 26 fotos",
+    isLocalGuide: true,
+    highlight: "Atendimento de Emergência na BR",
   },
   {
-    name: "Fabiano Antunes",
-    initials: "FA",
-    avatarColor: "#8e24aa",
-    vehicle: "Honda HR-V Touring",
-    text: "No calor de Montes Claros ar-condicionado é item de sobrevivência. Fizeram a recarga ecológica com contraste e a higienização com ozônio. O ar voltou a gelar no talo sem cheiro nenhum. Serviço rápido e equipe muito educada.",
+    name: "Guilherme Alves",
+    initials: "GA",
+    avatarColor: "#3949ab",
+    avatarImg: "/reviews/guilherme_alves.png",
+    vehicle: "Cliente há mais de 10 anos",
+    text: "Recomendo. Já sou cliente a mais de 10 anos, super indico profissionais ótimos honestidade. Nunca tive problemas. Eu só tenho agradecer toda equipe autocar.",
     rating: 5,
-    date: "Há 1 mês",
+    date: "3 anos atrás",
     city: "Montes Claros - MG",
-    localGuide: "Cliente Verificado",
-    ownerReply: "Agradecemos a confiança, Fabiano! Nossa recicladora automática de gás garante o rendimento máximo do sistema de climatização. Volte sempre!",
+    localGuide: "2 avaliações · 3 fotos",
+    likes: 3,
+    highlight: "10 Anos de Fidelidade",
   },
 ];
 
