@@ -11,7 +11,6 @@ import BoschStandard from "@/components/BoschStandard";
 import AboutHistory from "@/components/AboutHistory";
 import DiagnosticAssistant from "@/components/DiagnosticAssistant";
 import Testimonials from "@/components/Testimonials";
-import BrandsCarousel from "@/components/BrandsCarousel";
 import TipsInformativos from "@/components/TipsInformativos";
 import FaqSection from "@/components/FaqSection";
 import LocationMap from "@/components/LocationMap";
@@ -62,10 +61,7 @@ export default function Home() {
       {/* 9. Verified Google Maps Reviews Widget (4.7 Stars) */}
       <Testimonials />
 
-      {/* 10. Genuine Partner Brands & Components */}
-      <BrandsCarousel />
-
-      {/* 11. Technical Care & Maintenance Tips */}
+      {/* 10. Technical Care & Maintenance Tips */}
       <TipsInformativos />
 
       {/* 12. Frequently Asked Questions */}

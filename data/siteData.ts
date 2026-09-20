@@ -233,22 +233,18 @@ export interface AutomakerItem {
 }
 
 export const automakerBrands: AutomakerItem[] = [
-  { slug: "toyota", name: "Toyota", tier: "Líder Nacional", logo: "/montadoras/toyota.svg" },
-  { slug: "honda", name: "Honda", tier: "Líder Nacional", logo: "/montadoras/honda.svg" },
-  { slug: "bmw", name: "BMW", tier: "Importada / Premium", logo: "/montadoras/bmw.svg" },
-  { slug: "volkswagen", name: "Volkswagen", tier: "Líder Nacional", logo: "/montadoras/volkswagen.svg" },
-  { slug: "mercedes", name: "Mercedes-Benz", tier: "Importada / Premium", logo: "/montadoras/mercedes.svg" },
-  { slug: "jeep", name: "Jeep", tier: "Líder Nacional", logo: "/montadoras/jeep.svg" },
-  { slug: "audi", name: "Audi", tier: "Importada / Premium", logo: "/montadoras/audi.svg" },
-  { slug: "chevrolet", name: "Chevrolet", tier: "Líder Nacional", logo: "/montadoras/chevrolet.svg" },
-  { slug: "landrover", name: "Land Rover", tier: "Importada / Premium", logo: "/montadoras/landrover.svg" },
-  { slug: "fiat", name: "Fiat", tier: "Líder Nacional", logo: "/montadoras/fiat.svg" },
-  { slug: "volvo", name: "Volvo", tier: "Importada / Premium", logo: "/montadoras/volvo.svg" },
-  { slug: "hyundai", name: "Hyundai", tier: "Líder Nacional", logo: "/montadoras/hyundai.svg" },
-  { slug: "porsche", name: "Porsche", tier: "Importada / Premium", logo: "/montadoras/porsche.svg" },
-  { slug: "renault", name: "Renault", tier: "Líder Nacional", logo: "/montadoras/renault.svg" },
+  { slug: "nissan", name: "Nissan", tier: "Líder Nacional", logo: "/montadoras/nissan.svg" },
   { slug: "ford", name: "Ford", tier: "Líder Nacional", logo: "/montadoras/ford.svg" },
+  { slug: "fiat", name: "Fiat", tier: "Líder Nacional", logo: "/montadoras/fiat.svg" },
+  { slug: "honda", name: "Honda", tier: "Líder Nacional", logo: "/montadoras/honda.svg" },
+  { slug: "mitsubishi", name: "Mitsubishi", tier: "Líder Nacional", logo: "/montadoras/mitsubishi.svg" },
+  { slug: "toyota", name: "Toyota", tier: "Líder Nacional", logo: "/montadoras/toyota.svg" },
+  { slug: "audi", name: "Audi", tier: "Importada / Premium", logo: "/montadoras/audi.svg" },
+  { slug: "volkswagen", name: "Volkswagen", tier: "Líder Nacional", logo: "/montadoras/volkswagen.svg" },
   { slug: "peugeot", name: "Peugeot", tier: "Líder Nacional", logo: "/montadoras/peugeot.svg" },
+  { slug: "chevrolet", name: "Chevrolet", tier: "Líder Nacional", logo: "/montadoras/chevrolet.svg" },
+  { slug: "kia", name: "Kia", tier: "Líder Nacional", logo: "/montadoras/kia.svg" },
+  { slug: "citroen", name: "Citroën", tier: "Líder Nacional", logo: "/montadoras/citroen.svg" },
 ];
 
 export interface TestimonialItem {
