@@ -233,18 +233,16 @@ export interface AutomakerItem {
 }
 
 export const automakerBrands: AutomakerItem[] = [
-  { slug: "nissan", name: "Nissan", tier: "Líder Nacional", logo: "/montadoras/nissan.svg" },
-  { slug: "ford", name: "Ford", tier: "Líder Nacional", logo: "/montadoras/ford.svg" },
-  { slug: "fiat", name: "Fiat", tier: "Líder Nacional", logo: "/montadoras/fiat.svg" },
-  { slug: "honda", name: "Honda", tier: "Líder Nacional", logo: "/montadoras/honda.svg" },
-  { slug: "mitsubishi", name: "Mitsubishi", tier: "Líder Nacional", logo: "/montadoras/mitsubishi.svg" },
   { slug: "toyota", name: "Toyota", tier: "Líder Nacional", logo: "/montadoras/toyota.svg" },
-  { slug: "audi", name: "Audi", tier: "Importada / Premium", logo: "/montadoras/audi.svg" },
+  { slug: "honda", name: "Honda", tier: "Líder Nacional", logo: "/montadoras/honda.svg" },
   { slug: "volkswagen", name: "Volkswagen", tier: "Líder Nacional", logo: "/montadoras/volkswagen.svg" },
-  { slug: "peugeot", name: "Peugeot", tier: "Líder Nacional", logo: "/montadoras/peugeot.svg" },
+  { slug: "audi", name: "Audi", tier: "Importada / Premium", logo: "/montadoras/audi.svg" },
   { slug: "chevrolet", name: "Chevrolet", tier: "Líder Nacional", logo: "/montadoras/chevrolet.svg" },
-  { slug: "kia", name: "Kia", tier: "Líder Nacional", logo: "/montadoras/kia.svg" },
-  { slug: "citroen", name: "Citroën", tier: "Líder Nacional", logo: "/montadoras/citroen.svg" },
+  { slug: "fiat", name: "Fiat", tier: "Líder Nacional", logo: "/montadoras/fiat.svg" },
+  { slug: "hyundai", name: "Hyundai", tier: "Líder Nacional", logo: "/montadoras/hyundai.svg" },
+  { slug: "renault", name: "Renault", tier: "Líder Nacional", logo: "/montadoras/renault.svg" },
+  { slug: "ford", name: "Ford", tier: "Líder Nacional", logo: "/montadoras/ford.svg" },
+  { slug: "peugeot", name: "Peugeot", tier: "Líder Nacional", logo: "/montadoras/peugeot.svg" },
 ];
 
 export interface TestimonialItem {
