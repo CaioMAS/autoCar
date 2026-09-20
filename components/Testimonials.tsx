@@ -155,50 +155,26 @@ export default function Testimonials() {
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                    {/* Real Profile Image if available, else Initials */}
-                    {t.avatarImg ? (
-                      <div
-                        style={{
-                          width: "48px",
-                          height: "48px",
-                          borderRadius: "50%",
-                          overflow: "hidden",
-                          boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
-                          border: "2px solid #ffffff",
-                          flexShrink: 0,
-                          background: "#e2e8f0",
-                        }}
-                      >
-                        <img
-                          src={t.avatarImg}
-                          alt={t.name}
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover",
-                          }}
-                        />
-                      </div>
-                    ) : (
-                      <div
-                        style={{
-                          width: "48px",
-                          height: "48px",
-                          borderRadius: "50%",
-                          background: t.avatarColor,
-                          color: "#ffffff",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          fontWeight: 700,
-                          fontSize: "1rem",
-                          boxShadow: "0 2px 6px rgba(0,0,0,0.12)",
-                          flexShrink: 0,
-                        }}
-                      >
-                        {t.initials}
-                      </div>
-                    )}
+                    {/* User Initials Avatar with Clean Google Material Palette */}
+                    <div
+                      style={{
+                        width: "44px",
+                        height: "44px",
+                        borderRadius: "50%",
+                        background: t.avatarColor,
+                        color: "#ffffff",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontWeight: 700,
+                        fontSize: "0.98rem",
+                        letterSpacing: "0.02em",
+                        boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+                        flexShrink: 0,
+                      }}
+                    >
+                      {t.initials}
+                    </div>
 
                     <div>
                       <div
