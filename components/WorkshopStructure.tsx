@@ -11,21 +11,20 @@ interface WorkshopStructureProps {
 
 export default function WorkshopStructure({ onOpenBooking }: WorkshopStructureProps) {
   return (
-    <section id="estrutura" className="section" style={{ background: "#ffffff" }}>
+    <section id="estrutura" className="section" style={{ background: "#f8fafc", borderTop: "1px solid var(--border-light)", borderBottom: "1px solid var(--border-light)" }}>
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
           <div className="section-badge">
-            <Building2 size={15} />
-            Infraestrutura Real & Tecnologia
+            <Building2 size={14} color="var(--bosch-blue)" />
+            Infraestrutura Real Verificada
           </div>
           <h2 className="section-title">
-            Conheça por Dentro Nossa <span>Estrutura Física</span>
+            Centro Técnico com <span>Padrão de Fábrica</span>
           </h2>
           <p className="section-subtitle">
-            Diferente de oficinas improvisadas, a Auto Car possui um centro automotivo amplo,
-            equipado com padrão mundial Bosch, piso industrial demarcado, elevadores de alta capacidade
-            e recepção climatizada para o seu conforto.
+            Diferente de oficinas improvisadas, a Auto Car possui um ambiente industrial amplo,
+            limpo e organizado sob os rigorosos protocolos mundiais Bosch, com boxes individuais, elevadores de precisão e recepção climatizada.
           </p>
         </div>
 
@@ -33,7 +32,7 @@ export default function WorkshopStructure({ onOpenBooking }: WorkshopStructurePr
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1.25fr 0.95fr",
+            gridTemplateColumns: "1.2fr 1fr",
             gap: "28px",
             alignItems: "stretch",
             marginBottom: "40px",

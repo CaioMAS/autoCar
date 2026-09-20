@@ -18,20 +18,20 @@ export default function ServicesGrid({ onOpenBooking }: ServicesGridProps) {
   };
 
   return (
-    <section id="servicos" className="section" style={{ background: "#f8fafc" }}>
+    <section id="servicos" className="section" style={{ background: "#ffffff" }}>
       <div className="container">
         {/* Header */}
         <div className="section-header">
           <div className="section-badge">
-            <Wrench size={14} />
-            Especialidades Técnicas
+            <Wrench size={14} color="var(--bosch-blue)" />
+            Engenharia & Especialidades
           </div>
           <h2 className="section-title">
             Serviços Especializados <span>Nacionais & Importados</span>
           </h2>
           <p className="section-subtitle">
-            Equipamentos de padrão mundial Bosch, ferramentas de alta exatidão e técnicos certificados
-            para cuidar de cada detalhe mecânico e eletrônico do seu carro.
+            Equipamentos de homologação mundial Bosch, ferramentas de calibração micrométrica e técnicos
+            capacitados para garantir máxima segurança e durabilidade ao seu veículo.
           </p>
         </div>
 
@@ -52,7 +52,9 @@ export default function ServicesGrid({ onOpenBooking }: ServicesGridProps) {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
-                padding: "32px",
+                padding: "36px 30px",
+                background: "#f8fafc",
+                borderColor: "#e2e8f0",
               }}
             >
               <div>

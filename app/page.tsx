@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import AutomakerMarquee from "@/components/AutomakerMarquee";
 import FeaturePillars from "@/components/FeaturePillars";
-import QuickContactStrip from "@/components/QuickContactStrip";
 import ServicesGrid from "@/components/ServicesGrid";
 import WorkshopStructure from "@/components/WorkshopStructure";
 import BoschStandard from "@/components/BoschStandard";
@@ -42,11 +41,8 @@ export default function Home() {
       {/* 2. Automaker Continuous Marquee: National Leaders & Premium Imports */}
       <AutomakerMarquee />
 
-      {/* 3. Key Differentials & Pillars */}
+      {/* 3. Key Differentials & Pillars: Apple-style 4 Pillars of Excellence */}
       <FeaturePillars />
-
-      {/* 3. Quick Contact & Emergency Phone Strip */}
-      <QuickContactStrip />
 
       {/* 4. Specialized Services Grid */}
       <ServicesGrid onOpenBooking={handleOpenBooking} />

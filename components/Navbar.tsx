@@ -45,9 +45,11 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
           left: 0,
           right: 0,
           zIndex: 900,
-          background: "#ffffff",
-          borderBottom: "1px solid var(--border-light)",
-          boxShadow: scrolled ? "0 4px 20px rgba(0, 0, 0, 0.06)" : "none",
+          background: scrolled ? "rgba(255, 255, 255, 0.88)" : "#ffffff",
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)",
+          borderBottom: "1px solid rgba(226, 232, 240, 0.8)",
+          boxShadow: scrolled ? "0 4px 20px -2px rgba(10, 15, 29, 0.05)" : "none",
           transition: "var(--transition)",
         }}
       >

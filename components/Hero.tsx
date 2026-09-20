@@ -39,48 +39,50 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "8px",
-                padding: "6px 14px",
+                padding: "6px 16px",
                 borderRadius: "var(--radius-full)",
-                background: "var(--bosch-blue-light)",
-                border: "1px solid var(--bosch-blue-border)",
-                color: "var(--bosch-blue)",
-                fontSize: "0.82rem",
+                background: "#ffffff",
+                border: "1px solid var(--border-light)",
+                color: "var(--text-main)",
+                fontSize: "0.8rem",
                 fontWeight: 700,
                 textTransform: "uppercase",
-                letterSpacing: "0.05em",
-                marginBottom: "16px",
+                letterSpacing: "0.06em",
+                marginBottom: "20px",
+                boxShadow: "var(--shadow-sm)",
               }}
             >
-              <Award size={16} />
-              Oficina Autorizada Bosch Car Service
+              <Award size={15} color="var(--bosch-red)" />
+              Oficina Homologada Padrão Bosch Car Service
             </div>
 
             {/* Title */}
             <h1
               style={{
-                fontSize: "clamp(2rem, 3.8vw, 3.1rem)",
+                fontSize: "clamp(2.1rem, 4vw, 3.25rem)",
                 fontWeight: 800,
+                letterSpacing: "-0.035em",
                 color: "var(--text-main)",
-                lineHeight: 1.15,
-                marginBottom: "18px",
+                lineHeight: 1.14,
+                marginBottom: "20px",
               }}
             >
-              Oficina Mecânica Especializada &{" "}
-              <span style={{ color: "var(--bosch-blue)" }}>Padrão Bosch</span> em Montes Claros
+              Engenharia de precisão para o seu{" "}
+              <span style={{ color: "var(--bosch-blue)" }}>veículo.</span>
             </h1>
 
             {/* Subtitle */}
             <p
               style={{
-                fontSize: "1.06rem",
+                fontSize: "1.1rem",
                 color: "var(--text-secondary)",
-                lineHeight: 1.6,
-                maxWidth: "560px",
-                marginBottom: "28px",
+                lineHeight: 1.7,
+                maxWidth: "540px",
+                marginBottom: "32px",
               }}
             >
-              Mais de 24 anos de tradição, diagnóstico computadorizado com tecnologia oficial Bosch,
-              peças genuínas de 1ª linha e transparência do início ao fim. O cuidado que o seu veículo merece.
+              Mais de 24 anos de tradição, diagnóstico computadorizado com tecnologia original Bosch,
+              peças genuínas de linha de montagem e a honestidade comprovada por centenas de clientes em Montes Claros.
             </p>
 
             {/* Coherent Action Buttons */}
@@ -94,41 +96,96 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                 href={contactInfo.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-whatsapp hero-btn"
+                className="btn-secondary hero-btn"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  borderColor: "#cbd5e1",
+                }}
               >
-                <MessageCircle size={18} />
-                Falar no WhatsApp
+                <MessageCircle size={18} color="#16a34a" />
+                <span>Atendimento WhatsApp</span>
               </a>
 
-              <a href="#estrutura" className="btn-secondary hero-btn">
-                <Eye size={17} />
-                Conhecer Estrutura
+              <a
+                href="#estrutura"
+                style={{
+                  fontSize: "0.92rem",
+                  fontWeight: 600,
+                  color: "var(--text-secondary)",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  padding: "0 8px",
+                }}
+                className="hero-text-link"
+              >
+                <span>Conhecer oficina</span>
+                <span style={{ transition: "transform 0.2s" }}>→</span>
               </a>
             </div>
 
-            {/* Trust checkmarks */}
+            {/* Trust Badges */}
             <div
               style={{
                 display: "flex",
                 flexWrap: "wrap",
-                gap: "18px",
-                paddingTop: "20px",
+                gap: "12px",
+                paddingTop: "24px",
                 borderTop: "1px solid var(--border-light)",
-                fontSize: "0.86rem",
-                color: "var(--text-secondary)",
               }}
             >
-              <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
-                <CheckCircle2 size={16} color="#16a34a" />
+              <span
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  fontSize: "0.82rem",
+                  fontWeight: 600,
+                  color: "var(--text-secondary)",
+                  background: "#f8fafc",
+                  padding: "4px 12px",
+                  borderRadius: "var(--radius-full)",
+                  border: "1px solid var(--border-light)",
+                }}
+              >
+                <CheckCircle2 size={14} color="var(--bosch-blue)" />
+                Scanner Oficial Bosch KTS
+              </span>
+              <span
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  fontSize: "0.82rem",
+                  fontWeight: 600,
+                  color: "var(--text-secondary)",
+                  background: "#f8fafc",
+                  padding: "4px 12px",
+                  borderRadius: "var(--radius-full)",
+                  border: "1px solid var(--border-light)",
+                }}
+              >
+                <CheckCircle2 size={14} color="var(--bosch-blue)" />
                 Especialistas em Nacionais & Importados
               </span>
-              <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
-                <CheckCircle2 size={16} color="#16a34a" />
-                Orçamento Transparente com Peças Genuínas
-              </span>
-              <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
-                <CheckCircle2 size={16} color="#16a34a" />
-                Garantia Nacional da Rede Bosch
+              <span
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  fontSize: "0.82rem",
+                  fontWeight: 600,
+                  color: "var(--text-secondary)",
+                  background: "#f8fafc",
+                  padding: "4px 12px",
+                  borderRadius: "var(--radius-full)",
+                  border: "1px solid var(--border-light)",
+                }}
+              >
+                <CheckCircle2 size={14} color="var(--bosch-blue)" />
+                Peças Genuínas & Garantia de Rede
               </span>
             </div>
           </div>
