@@ -225,30 +225,67 @@ export const partnerBrands = [
   { name: "Dayco", logo: "/marcas/img-12.png" },
 ];
 
-export const testimonials = [
+export interface TestimonialItem {
+  name: string;
+  initials: string;
+  avatarColor: string;
+  vehicle: string;
+  text: string;
+  rating: number;
+  date: string;
+  city: string;
+  localGuide?: string;
+  ownerReply?: string;
+}
+
+export const testimonials: TestimonialItem[] = [
   {
     name: "Rodrigo Vasconcelos",
+    initials: "RV",
+    avatarColor: "#1a73e8",
     vehicle: "Jeep Compass Longitude",
-    text: "Excelente atendimento! O diagnóstico da injeção foi cirúrgico com os equipamentos da Bosch. Enquanto outras oficinas queriam trocar peças desnecessárias, a Auto Car identificou e corrigiu o sensor exato. Transparência nota 10!",
+    text: "Excelente atendimento! O diagnóstico da injeção foi cirúrgico com os equipamentos da Bosch. Enquanto outras oficinas queriam trocar peças desnecessárias, a Auto Car identificou e corrigiu o sensor exato. Transparência e competência nota 10!",
     rating: 5,
     date: "Há 2 semanas",
     city: "Montes Claros - MG",
+    localGuide: "Local Guide · 18 avaliações",
+    ownerReply: "Muito obrigado, Rodrigo! A precisão e honestidade no diagnóstico com nossos scanners Bosch KTS são o pilar da nossa oficina. Conte sempre conosco!",
   },
   {
     name: "Mariana Alencar",
+    initials: "MA",
+    avatarColor: "#e37400",
     vehicle: "Volkswagen T-Cross",
-    text: "Oficina impecável, limpa e super moderna. O alinhamento 3D deixou o carro perfeito na estrada para Belo Horizonte. Atendimento rápido pelo WhatsApp e preço justo com peças originais. Recomendo de olhos fechados!",
+    text: "Oficina impecável, limpa e super moderna. O alinhamento 3D a laser deixou o carro perfeito na viagem para Belo Horizonte pela BR-135. Atendimento rápido pelo WhatsApp e preço justo com peças originais. Recomendo de olhos fechados!",
     rating: 5,
     date: "Há 1 mês",
     city: "Montes Claros - MG",
+    localGuide: "Cliente Verificado",
+    ownerReply: "Ficamos muito felizes com seu feedback, Mariana! Segurança na estrada e conforto para sua família é nossa prioridade absoluta.",
   },
   {
     name: "Carlos Eduardo Mendes",
+    initials: "CM",
+    avatarColor: "#0f9d58",
     vehicle: "Toyota Corolla Hybrid",
-    text: "Levo meus carros na Auto Car desde a época do Sr. Batata, e agora com o Danilo e Edmar Jr a oficina se tornou uma das mais modernas de Minas Gerais. O padrão Bosch Car Service passa total confiança.",
+    text: "Levo meus carros na Auto Car desde a época da oficina antiga do Sr. Batata, e agora com o Danilo e Edmar Jr a estrutura se tornou uma das melhores de Minas Gerais. O padrão Bosch Car Service passa total tranquilidade.",
     rating: 5,
     date: "Há 3 semanas",
     city: "Montes Claros - MG",
+    localGuide: "Local Guide · 34 avaliações",
+    ownerReply: "Grande Carlos! Uma honra enorme ter clientes amigos de longa data como você acompanhando essa evolução de mais de duas décadas. Um forte abraço!",
+  },
+  {
+    name: "Fabiano Antunes",
+    initials: "FA",
+    avatarColor: "#8e24aa",
+    vehicle: "Honda HR-V Touring",
+    text: "No calor de Montes Claros ar-condicionado é item de sobrevivência. Fizeram a recarga ecológica com contraste e a higienização com ozônio. O ar voltou a gelar no talo sem cheiro nenhum. Serviço rápido e equipe muito educada.",
+    rating: 5,
+    date: "Há 1 mês",
+    city: "Montes Claros - MG",
+    localGuide: "Cliente Verificado",
+    ownerReply: "Agradecemos a confiança, Fabiano! Nossa recicladora automática de gás garante o rendimento máximo do sistema de climatização. Volte sempre!",
   },
 ];
 
